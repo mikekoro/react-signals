@@ -6,7 +6,7 @@ import { generateData } from "./lib/mock";
 
 export default function Summary() {
 
-  const mockData = generateData(2, 3, 5, 4);
+  const mockData = generateData(6, 3, 5, 4);
   // Flatten marketHashes for quick access
   const marketHashes = mockData.sports.flatMap(sport =>
     sport.leagues.flatMap(league =>

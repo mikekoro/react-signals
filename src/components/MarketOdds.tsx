@@ -14,9 +14,9 @@ export default function MarketOdds({ market }: { market: any }) {
   // Flash animation function
   const flashElement = (element: HTMLElement | null) => {
     if (!element) return;
-    element.classList.add("bg-blue-500");
+    //element.classList.add("bg-blue-500");
     setTimeout(() => {
-      element.classList.remove("bg-red-500");
+      //element.classList.remove("bg-red-500");
     }, 10);
   };
 
@@ -33,10 +33,10 @@ export default function MarketOdds({ market }: { market: any }) {
   
   return (
     <div className="flex justify-between px-2 py-1 text-sm">
-      <span ref={outcomeOneRef} className="transition-colors duration-1000">
+      <span ref={outcomeOneRef} className="transition-colors duration-1000 text-red-500">
         {market.outcomeOneName}: {bestOddsOutcomeOne}
       </span>
-      <span ref={outcomeTwoRef} className="transition-colors duration-1000">
+      <span ref={outcomeTwoRef} className="transition-colors duration-1000 text-blue-500">
         {market.outcomeTwoName}: {bestOddsOutcomeTwo}
       </span>
     </div>
